@@ -95,4 +95,11 @@
       font-weight: 500;
     }
   }
+
+  .container {
+    min-height: 100vh;
+    img {
+      height: 50vh;
+    }
+  }
 }
