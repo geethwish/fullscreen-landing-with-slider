@@ -11,7 +11,7 @@ interface SliderCardProps {
 const SliderCard: FC<SliderCardProps> = ({ title, content }) => {
   return (
     <div className={style.card}>
-      <h3>{title}</h3>
+      <h2>{title}</h2>
       <p>{content}</p>
     </div>
   );

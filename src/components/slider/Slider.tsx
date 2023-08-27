@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import {
   EffectCoverflow,
   EffectFade,
@@ -10,6 +9,7 @@ import {
 import { SliderDataProps } from "../scrollableContent/ScrollableContent.types";
 import SliderCard from "./SliderCard";
 
+// styles
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
@@ -28,7 +28,7 @@ const Slider: FC<SliderProps> = ({ data }) => {
         navigation={true}
         mousewheel={true}
         keyboard={true}
-        centeredSlides={true}
+        //centeredSlides={true}
         modules={[EffectFade, Navigation, Pagination, EffectCoverflow]}
         coverflowEffect={{
           rotate: 50,
