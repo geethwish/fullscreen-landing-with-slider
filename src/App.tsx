@@ -1,13 +1,10 @@
-import Navbar from "./components/navbar/Navbar";
-import ScrollableContent from "./components/scrollableContent/ScrollableContent";
+import { RouterProvider } from "react-router";
+import { router } from "./routes";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <div className="content-body">
-        <ScrollableContent />
-      </div>
+      <RouterProvider router={router} />
     </>
   );
 }

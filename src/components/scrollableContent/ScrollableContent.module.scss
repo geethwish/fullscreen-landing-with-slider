@@ -41,3 +41,27 @@
   position: absolute;
   bottom: 0;
 }
+.section2 {
+  position: relative;
+}
+
+.section2contentWrapper {
+  max-width: 70%;
+  box-sizing: border-box;
+}
+.sliderContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  position: absolute;
+  top: 30%;
+}
+.title {
+  h1 {
+    text-align: center;
+  }
+}
+
+.sliderWrapper {
+  width: 100%;
+}
