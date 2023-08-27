@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode, FC } from "react";
+import { ReactElement, ReactNode, FC } from "react";
 import styles from "./StickyButton.module.scss";
 
 interface StickyButtonProps {

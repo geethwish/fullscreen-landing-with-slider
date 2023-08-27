@@ -7,21 +7,23 @@ import bg from "../../assets/images/bg1.webp";
 import earth from "../../assets/images/earth.jpeg";
 import StickyButton from "../stickyButton/StickyButton";
 import Slider from "../slider/Slider";
+import { updatePage } from "../../redux/slices/navbar.slice";
 
 // styles
 import styles from "./ScrollableContent.module.scss";
-import { updatePage } from "../../redux/slices/navbar.slice";
 
 const ScrollableContent = () => {
   const dispatch = useDispatch();
 
   const [data, setData] = useState<SliderDataProps[] | []>([]);
 
+  // add page name when click on scroll button
   const handleScroll = () => {
     dispatch(updatePage("DISCOVER MORE"));
   };
 
   useEffect(() => {
+    // fet slider data from json file
     axios
       .get("./sliderContent.json")
       .then((response) => {
@@ -42,12 +44,7 @@ const ScrollableContent = () => {
         onMouseEnter={() => handleUpdatePage("")}
         onMouseLeave={() => handleUpdatePage("DISCOVER MORE")}
       >
-        <img
-          src={bg}
-          className={styles.bgImage}
-          alt="backgroundImage"
-          // srcSet="https://cdn.pixabay.com/photo/2018/08/21/23/29/forest-3622519_960_720.jpg 1x, https://cdn.pixabay.com/photo/2018/08/21/23/29/forest-3622519_1280.jpg 2xF"
-        />
+        <img src={bg} className={styles.bgImage} alt="backgroundImage" />
         <div className={styles.content}>
           <div className={styles.textWrapper}>
             <h1>
